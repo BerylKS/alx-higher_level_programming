@@ -1,0 +1,35 @@
+===============================
+Test Cases for 0-add_integer.py
+===============================
+
+The function "add_integer" returns an integer: the addition of a and b. That value is equivalent to using the ``+`` operator.
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Test case 1 : Both positive integers
+    >>> add_integer(1, 2)
+    3
+
+Test case 2 : a positive integer, b negative float
+    >>> add_integer(100, -2)
+    98
+
+Test case 3 : Only a value given
+    >>> add_integer(2)
+    100
+
+Test case 4 : a positive float, b negative integer
+    >>> add_integer(100.3, -2)
+    98
+
+Test case 5 : a integer, b string
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+Test case 6 : no a value
+    >>> add_integer(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
