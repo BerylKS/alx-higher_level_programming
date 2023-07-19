@@ -33,3 +33,27 @@ Test case 6 : no a value
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
+
+Test case 7 : a is infinity
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+Test case 8 : b is infinity
+    >>> add_integer(2, float('inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+Test case 9 : a is NaN number
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
+
+Test case 10 : b is NaN number
+    >>> add_integer(2, float('nan'))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
